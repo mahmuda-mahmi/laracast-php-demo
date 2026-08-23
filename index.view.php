@@ -4,36 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- <style>
-        body {
-            display: grid;
-            height: 100vh;
-            place-items: center;
-            font-family: sans-serif;
-            background-color: #eed8d8;
-            margin: 0;
-        }
-    </style> -->
 </head>
 <body>
 
+    <!-- problem 1 -->
+    <h2>My name is <?= $name ?></h2>
+    <h3>I am <?= $age ?> years old</h3>
+    <p>I live in <?= $country ?></p>
+    <p>I work as a <?= $profession ?></p>
 
-   <h1> Recommended Books</h1>
+    <!-- problem 2 -->
 
+    <h2><?= isEven($number); ?></h2>
+
+    <!-- problem 3 -->
+     <h2>Grade is <?= findGrade($score) ?></h2>
+
+    <h1><?= $business['bName'] ?></h1>
 
     <ul>
-        <?php foreach($filteredBooks as $book) : ?>
-            <li>
-                <?= $book['name'] ?>
-                <br>
-                <?= $book['releaseYear'] ?>
-                <br>
-                <?= $book['author'] ?>
-            </li>
+        <?php foreach($business['categories'] as $category) : ?>
+            <li><?= $category ?></li>
         <?php endforeach; ?>
     </ul>
-
-
 
 </body>
 </html>
