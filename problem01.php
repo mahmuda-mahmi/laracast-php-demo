@@ -7,44 +7,8 @@ $age = 25;
 $country = "Bangladesh";
 $profession = "Web Developer";
 
-// problem 2
 
-$number = 55;
 
-function isEven($number) {
-    if($number%2 == 0) {
-        return "$number is even";
-    }
-    else {
-        return "$number is odd";
-    }
-
-}
-
-// problem 3
-
-$score = 79;
-
-function findGrade($score) {
-    if($score > 100 || $score < 0) {
-        return "Invalid score";
-    }
-    elseif( $score >=80 && $score <=100) {
-        return "A";
-    }
-    elseif( $score >=70 && $score <=79) {
-        return "B";
-    }
-    elseif( $score >=60 && $score <=69) {
-        return "C";
-    }
-    elseif( $score >=50 && $score <=59) {
-        return "D";
-    }
-    else {
-        return "F";
-    }
-}
 
 $business = [
     'bName' => 'MahmudaCast',
@@ -59,4 +23,4 @@ function register($user) {
     // Redirect them to new dashboard;
 }
 
-require "problem01.view.php";
+require "views/problem01-view.php";

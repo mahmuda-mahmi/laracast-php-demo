@@ -1,8 +1,12 @@
 <?php
 
-// problem 3
+// problem 4
 
-$score = 79;
+$students = [
+    ["name" => "Alice", "grade" => 85],
+    ["name" => "Bob", "grade" => 62],
+    ["name" => "Charlie", "grade" => 45],
+];
 
 function findGrade($score) {
     if($score > 100 || $score < 0) {
@@ -25,4 +29,11 @@ function findGrade($score) {
     }
 }
 
-require "views/problem03-view.php";
+function showGrades($students) {
+    foreach ($students as $student) {
+        $grade = findGrade($student['grade']);
+        echo "<li>{$student['name']}: $grade</li>";
+    }
+}
+
+require "views/problem13-view.php";
